@@ -1,4 +1,5 @@
 #-*- coding: UTF-8 -*- 
+# Transfer the whole file, not split into multipe
 
 import SocketServer
 import string
