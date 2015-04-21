@@ -74,9 +74,9 @@ try :
                         packet = sock.recv(40960000)
                         decoder.read_payload(packet)                      #decoding packet
 		        print('packet{}/{}decoded'.format(decoder.rank(),decoder.symbols()))
-		        f = open(filename ,'a')
-                        f.write(decoder.copy_symbols())                   # store the decoded data
-		    	f.close()
+		    f = open(filename ,'a')
+                    f.write(decoder.copy_symbols())                   # store the decoded data
+		    f.close()
 		    sock.sendall('Decode finished')
 		    times+=1
 		    print('Decode finished',times)
